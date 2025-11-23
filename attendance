@@ -1,4 +1,3 @@
-
 import os
 import time
 
@@ -24,7 +23,7 @@ except:
 while 1:
     print("\n\n")
     print(" ATTENDANCE TRACKER")
-  
+    
 
     if total == 0:
         per = 0
@@ -33,7 +32,7 @@ while 1:
 
     print("Total classes :", total)
     print("I attended    :", attended)
-    print("Percentage    :",  "%")
+    print("Percentage    :", per, "%") # FIX: Display 'per' variable
 
     if per >= 75:
         print(">>> OKAY SAFE")
@@ -65,7 +64,7 @@ while 1:
         
 
         if per >= 75:
-      
+        
             bunkpossible = 0
             tempheld = total + 1
             tempatt = attended
@@ -88,7 +87,7 @@ while 1:
 
     elif ans == "3":
         f = open(file,"w")
-        f.write(str(attended))
+        f.write(str(total) + "," + str(attended)) 
         f.close()
         print("saved")
         break
